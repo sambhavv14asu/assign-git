@@ -1,0 +1,54 @@
+ 1) gitignore tells git which files(or extensions) to ignore while commiting the project so that it does not become a part of the source control.
+ It can consist of files that are useful for local workspaces maintained by individual developers. gitignore files for a java file can be of type-
+.mtj.tmp/
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+
+##############################
+## Maven
+##############################
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+pom.xml.bak
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+##############################
+## Gradle
+##############################
+bin/
+build/
+.gradle
+.gradletasknamecache
+gradle-app.setting
+!gradle-wrapper.jar
+
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+2) Fast forward merge can be performed when there is a direct linear path from the source branch to the target branch. 
+In fast-forward merge, git simply moves the source branch pointer to the target branch pointer without creating an extra merge commit.
+
+3) Different developers might work on different features or different bugs. With the help of branching, team members can work on different features
+independantly without really worrying about the main branch. Once the feature is completed, they can raise a merge request that can be reviewed by 
+other developers before pulling it into the main branch. It avoid a lot of hassle that would otherwise be created if everyone works on the same branch.
+
+4)You can have as many remotes as you want, but you can only have one remote named "origin". The remote called "origin" is not 
+special in any way, except that it is the default remote created by Git when you clone an existing repository
